@@ -1,0 +1,129 @@
+:root{
+    --black: #292b2c;
+    --blue-matte: rgb(101, 119, 179);
+}
+
+.green{
+    color: green;
+}
+
+.orange{
+    color: orange;
+}
+
+.red{
+    color: red;
+}
+
+.add-button{
+    background-color: gold;
+    color: #292b2c;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.add-button:hover{
+    background-color: var(--blue-matte);
+    color: white;
+}
+
+.add-button:hover > .add-to-cart-img{
+    background-image: url(../images/add-after-svgrepo-com.svg);
+}
+
+.main-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+    margin: 50px;
+}
+
+h3{
+    margin: 0;
+}
+
+.left-book-wrapper{
+    display: flex;
+    gap: 20px;
+}
+
+.days-wrapper{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.book-item{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--blue-matte);
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.day-counter{
+    display: flez;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-text > h2{
+    border-bottom: 1px solid var(--blue-matte);
+    color: var(--blue-matte);
+}
+
+.book-item-img{
+    width: 120px !important;
+    height: 150px !important;
+    background-repeat: no-repeat;
+    background-size: contain !important;
+    background-position: center;
+
+}
+
+.book-item-title{
+    padding: 0px 10px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.right-book-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.day-counter > h3{
+    font-size: 24px;
+}
+
+.days-wrapper > span{
+    font-size: 24px;
+}
+
+.add-to-cart-img{
+    background-image: url(../images/add-svgrepo-com.svg);
+    width: 30px !important;
+    height: 30px !important;
+}

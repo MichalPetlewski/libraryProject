@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../static/css/book_info.css" />
+    <link rel="stylesheet" href="../static/css/header.css" />
+    <link rel="stylesheet" href="../static/css/footer.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="left-side">
+        <div class="buttons-wrapper">
+          <div class="logo-wrapper">
+            <div class="logo img"></div>
+            <div class="logo-text">Biblioteka</div>
+          </div>
+          <a href="my_books">
+            <div class="button">
+              <span>Moje ksiązki</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="right-side">
+        <form method="post" action="/search" class="search-wrapper">
+          <div class="input-wrapper">
+            <div class="search-icon img"></div>
+            <input
+              name="fraze"
+              type="text"
+              class="search-input"
+              placeholder="Szukaj..."
+            />
+          </div>
+        </form>
+        <div class="user-bar">
+          <div id="user-setting" class="user-bar-settings">
+            <ul class="user-list">
+              <li>
+                <a href="">
+                  <div class="user-setbar first-user-settings">
+                    <div
+                      class="icon-settings"
+                      style="
+                        background-image: url(../photos/history-svgrepo-com.svg);
+                      "
+                      alt="icon of setting"
+                    ></div>
+                    <span style="font-weight: bold">niezalgowano</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/login"
+                  ><div class="user-setbar">
+                    <div
+                      class="user-bar-setting img"
+                      style="
+                        background-image: url(../static/images/log-out-off-out-svgrepo-com.svg);
+                      "
+                      alt="icon of setting"
+                    ></div>
+                    <span style="font-weight: bold">Log in</span>
+                  </div></a
+                >
+              </li>
+            </ul>
+
+            <div class="close-arrow">
+              <div
+                id="closing-arrow"
+                class="acc-arrow img"
+                style="
+                  background-image: url(../static/images/arrow-up-svgrepo-com.svg);
+                "
+              ></div>
+            </div>
+          </div>
+          <div id="user-sett-before" class="user-wrapper">
+            <div
+              class="profile-img img"
+              style="
+                background-image: url(../static/images/user-circle-svgrepo-com.svg);
+              "
+            ></div>
+            <span>Nie zalogowany</span>
+            <div
+              id="opening-arrow"
+              class="img acc-arrow"
+              style="
+                background-image: url(../static/images/down-arrow2-svgrepo-com.svg);
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main-section">
+      {% for item in results %}
+      <div class="left-wrapper column">
+        <div class="top-section">
+          <div class="top-text book-title">
+            <span>{{ item[0] }}</span>
+          </div>
+          <div class="top-text book-author">
+            <span>{{ item[1]}}</span>
+          </div>
+        </div>
+        <div class="book-img-wrapper">
+          <div
+            style="background-image: url(../static/images/book-covers/{{item[3]}})"
+            class="book-picture img"
+          ></div>
+        </div>
+      </div>
+      <div class="right-wrapper column">
+        <div class="right-top">
+          <div class="book-title-wrapper info-item">
+            <span class="right-text title-text">{{ item[0] }}</span>
+            <span class="right-text title-text author">{{ item[1]}}</span>
+          </div>
+          <div class="book-description-wrapper info-item">
+            <span class="description-text"> {{ item[2] }} </span>
+          </div>
+        </div>
+        <div class="right-bottom">
+          <div class="button-wrapper">
+            <a href="/order/{{id}}" class="add-button">
+              <div
+                style="
+                  background-image: url(../static/images/cart-trolley-ui-6-svgrepo-com.svg);
+                "
+                class="lend-img img"
+              ></div>
+              <span>Wypozycz</span>
+            </a>
+          </div>
+          <div class="button-wrapper">
+            <a href="/rate/{{id}}" class="add-button">
+              <div
+                style="
+                  background-image: url(../static/images/star-half-rate-rating-outline-svgrepo-com.svg);
+                "
+                class="rate-img img"
+              ></div>
+              <span>Oceń</span>
+            </a>
+          </div>
+          <div class="note">
+            <span
+              >*Ksiązkę można wyporzyczyć na miesiąc. Karzdy dzień spóźnia
+              spowoduje naliczanie opłat
+            </span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <footer class="footer">
+      <a href="/"><div class="footer-button-wrapper button">Biblioteka</div></a>
+      <a href="/contact"
+        ><div class="footer-button-wrapper button">Kontakt</div></a
+      >
+      <a href="#"><div class="footer-button-wrapper button">Regulamin</div></a>
+    </footer>
+    <script src="../static/scripts/main.js" async defer></script>
+  </body>
+</html>

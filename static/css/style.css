@@ -1,0 +1,129 @@
+:root{
+    --black: #292b2c;
+    --blue-matte: rgb(101, 119, 179);
+}
+
+.main-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+    margin: 50px;
+}
+
+.img{
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.acount-options-unactive{
+    display: none;
+}
+
+.acount-wrapper-visible{
+    display: block;
+}
+
+.main-top > h2{
+    border-bottom: 1px solid var(--blue-matte);
+    color: var(--blue-matte);
+}
+
+.main-top-options{
+    overflow-x: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    padding: 40px;
+}
+
+.arrow{
+    max-width: 50px;
+    max-height: 50px;
+    background-color: var(--blue-matte);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.arrow-left{
+    background-image: url('../images/left-arrow.svg');
+}
+
+.arrow-right{
+    background-image: url('../images/right-arrow.svg');
+}
+
+.option-item-wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    max-width: 1354px;
+    padding: 10px;
+}
+
+.option-item-img{
+    background-image: url('../images/library-svgrepo-com.svg');
+    width: 150px;
+    height: 180px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.option-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 20px;
+    border: var(--blue-matte) 1px solid;
+    border-radius: 5px;
+}
+
+.option-item-text{
+    width: 150px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+}
+
+.option-item-text{
+    color: var(--blue-matte);
+    border-top: var(--blue-matte) 1px solid;
+}
+
+.option-item:hover{
+    background-color: var(--blue-matte);
+}
+
+.option-item:hover .option-item-text{
+    color: #f5f5f5;
+    border-top: #f5f5f5 1px solid;
+}
+
+.rating{
+    color: var(--blue-matte);
+    font-size: 24px;
+    text-align: center;
+}
+
+.option-item:hover .rating{
+    color: #f5f5f5;
+}
+
+.best-rated-item-text{
+    width: 300px;
+}

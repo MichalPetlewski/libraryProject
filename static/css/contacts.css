@@ -1,0 +1,89 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+    margin: 50px;
+}
+
+.site{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: white;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+}
+
+.top-section{
+    color: var(--blue-matte);
+    border-bottom:1px solid var(--blue-matte) ;
+}
+
+.contacts-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.contact-icon{
+    width: 100px !important; 
+    height: 100px !important;
+    border-radius: 50%;
+    background-size: contain !important;
+    padding: 20px;
+    background-color: var(--blue-matte);
+    border: 2px solid gold;
+
+}
+
+.contact-icon:hover{
+    background-size: cover !important;
+}
+
+.contact-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid var(--blue-matte);
+    border-radius: 10px;
+}
+
+.text-wrapper{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.contact-text{
+    color: var(--blue-matte);
+    font-size: 24px;
+    padding: 10px 5px;
+}
+
+.contact-text:hover{
+    color: gold;
+    background-color: var(--blue-matte);
+    border-radius: 5px;
+    transition: .4s;
+    padding: 12px 7px;
+
+}
+
+.left-side-text{
+    display: flex;
+    gap: 80px;
+}
+
+.role-text > span{
+    font-size: 20px;
+}

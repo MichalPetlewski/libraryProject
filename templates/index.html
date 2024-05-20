@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/header.css" />
+    <link rel="stylesheet" href="../static/css/footer.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="left-side">
+        <div class="buttons-wrapper">
+          <div class="logo-wrapper">
+            <div class="logo img"></div>
+            <div class="logo-text">Biblioteka</div>
+          </div>
+          <a href="my_books">
+            <div class="button">
+              <span>Moje ksiązki</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="right-side">
+        <form method="post" action="/search" class="search-wrapper">
+          <div class="input-wrapper">
+            <div class="search-icon img"></div>
+            <input
+              name="fraze"
+              type="text"
+              class="search-input"
+              placeholder="Szukaj..."
+            />
+          </div>
+        </form>
+        <div class="user-bar">
+          <div id="user-setting" class="user-bar-settings">
+            <ul class="user-list">
+              <li>
+                <a href="">
+                  <div class="user-setbar first-user-settings">
+                    <div
+                      class="icon-settings"
+                      style="
+                        background-image: url(../photos/history-svgrepo-com.svg);
+                      "
+                      alt="icon of setting"
+                    ></div>
+                    <span style="font-weight: bold">niezalgowano</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/login"
+                  ><div class="user-setbar">
+                    <div
+                      class="user-bar-setting img"
+                      style="
+                        background-image: url(../static/images/log-out-off-out-svgrepo-com.svg);
+                      "
+                      alt="icon of setting"
+                    ></div>
+                    <span style="font-weight: bold">Log in</span>
+                  </div></a
+                >
+              </li>
+            </ul>
+
+            <div class="close-arrow">
+              <div
+                id="closing-arrow"
+                class="acc-arrow img"
+                style="
+                  background-image: url(../static/images/arrow-up-svgrepo-com.svg);
+                "
+              ></div>
+            </div>
+          </div>
+          <div id="user-sett-before" class="user-wrapper">
+            <div
+              class="profile-img img"
+              style="
+                background-image: url(../static/images/user-circle-svgrepo-com.svg);
+              "
+            ></div>
+            <span>Nie zalogowany</span>
+            <div
+              id="opening-arrow"
+              class="img acc-arrow"
+              style="
+                background-image: url(../static/images/down-arrow2-svgrepo-com.svg);
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <section class="main-section">
+        <div class="main-top">
+          <div class="main-top">
+            <h2>Witamy w bibliotece online</h2>
+          </div>
+          <div class="main-top-options">
+            <div class="arrow-left arrow img"></div>
+            <div class="option-item-wrapper">
+              {% for item in results %}
+              <a href="/book-details/{{item[0]}}">
+                <div class="option-item">
+                  <div
+                    style="background-image: url(../static/images/book-covers/{{item[3]}});"
+                    class="option-item-img img"
+                  ></div>
+                  <div class="option-item-text">{{ item[1] }}</div>
+                </div>
+              </a>
+              {% endfor %}
+            </div>
+            <div class="arrow-right arrow img"></div>
+          </div>
+        </div>
+        <div class="best-rated-wrapper main-top">
+          <h2>Najlepsze ocenione książki</h2>
+          <div class="best-rated-list main-top-options">
+            <a href="book-details">
+              <div class="best-rated-item option-item">
+                <div class="best-rated-item-img option-item-img img"></div>
+                <div class="best-rated-item-text option-item-text">
+                  Książka o prawdziwym życiu
+                </div>
+                <div class="rating best-rated-item-text">5.0</div>
+              </div>
+            </a>
+            <a href="book-details">
+              <div class="best-rated-item option-item">
+                <div class="best-rated-item-img option-item-img img"></div>
+                <div class="best-rated-item-text option-item-text">
+                  Książka o prawdziwym życiu
+                </div>
+                <div class="rating best-rated-item-text">5.0</div>
+              </div>
+            </a>
+            <a href="book-details">
+              <div class="best-rated-item option-item">
+                <div class="best-rated-item-img option-item-img img"></div>
+                <div class="best-rated-item-text option-item-text">
+                  Książka o prawdziwym życiu
+                </div>
+                <div class="rating best-rated-item-text">5.0</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <a href="/"><div class="footer-button-wrapper button">Biblioteka</div></a>
+      <a href="/contact"
+        ><div class="footer-button-wrapper button">Kontakt</div></a
+      >
+      <a href="#"><div class="footer-button-wrapper button">Regulamin</div></a>
+    </footer>
+    <script src="../static/scripts/main.js" async defer></script>
+  </body>
+</html>

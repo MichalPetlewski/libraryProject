@@ -1,0 +1,272 @@
+:root{
+    --black: #292b2c;
+    --blue-matte: rgb(101, 119, 179);
+}
+
+body{
+    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #292b2c;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    padding: 0;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #292b2c;
+    font-size: 16px;
+}
+
+.img{
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.is-visible{
+    display: block;
+}
+
+.is-hidden{
+  display: none;
+}
+
+
+.header{
+    padding: 20px;
+    border-bottom: #292b2c solid .5px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0px 2px 2px 0px rgba(66, 68, 90, 1);
+    gap: 30px;
+    background-color: #edf2f4;
+}
+
+.logo{
+    background-image: url(../images/library-svgrepo-com.svg);
+    min-width: 80px;
+    min-height: 80px;
+}
+
+
+.logo-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 54px;
+}
+
+.buttons-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.button{
+    background-color: gold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #292b2c;
+    text-decoration: none;
+}
+
+.left-side{
+    display: flex;
+}
+
+.buttons-wrapper a{
+    text-decoration: none;
+    color: #292b2c;
+    font-size: 16px;
+}
+
+.acount-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background-color: lightgray;
+    padding: 5px 10px 5px 10px;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+
+}
+
+.acount-options-active{
+    display: none;
+    gap: 10px;
+    position: absolute;
+    top: 8.5%;
+    right: 0%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1;
+    width: 181.725px;
+    margin-right: 5px;
+    background-color: lightgray;
+    width: 199.5px;
+}
+
+
+.profile-img{
+    background-color: blue;
+    background-image: url(../images/user-circle-svgrepo-com.svg);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 1px 0px 5px 2px rgba(66, 68, 90, 1);
+}
+
+.main-header{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.right-side{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-icon{
+    background-image: url('../images/search-svgrepo-com\ \(2\).svg');
+    width: 30px;
+    height: 30px;
+}
+
+input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.right-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid #292b2c;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #292b2c;
+    background-color: white;
+}
+
+
+.button:hover{
+    color: #f5f5f5;
+    background-color: var(--blue-matte);
+}
+
+.option-item-img{
+    background-image: url('../images/library-svgrepo-com.svg');
+    width: 120px;
+    height: 120px;
+}
+
+.unactive{
+    visibility: visible;
+}
+
+.active{
+    visibility: hidden;
+}
+
+.user-bar{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    position: relative;
+}
+
+.user-wrapper{
+    margin-right: 6px;
+    display: flex;
+    padding: 12px 10px;
+    gap: 10px;
+    background-color: var(--userbar-color);
+    align-items: center;
+    justify-content: center;
+}
+
+.user-bar-settings {
+    box-sizing: content-box;
+    width: 198px;
+    height: fit-content;
+    padding: 12px 10px;
+    background-color: var(--userbar-color);
+    position: absolute;
+    margin-right: 6px;
+    visibility: hidden;
+    background-color: rgb(219,226,233);
+}
+
+.acc-arrow{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.close-arrow{
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px;
+}
+
+.user-setbar{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 4px;
+    border-bottom: 1px gray solid;
+    margin-top: 10px;
+}
+
+.user-setbar{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 4px;
+    border-bottom: 1px gray solid;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.user-bar-setting{
+    width: 30px;
+    height: 30px;
+}

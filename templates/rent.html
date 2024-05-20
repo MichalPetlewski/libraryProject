@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>rent</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/css/rent.css">
+        <link rel="stylesheet" href="../static/css/header.css">
+        <link rel="stylesheet" href="../static/css/footer.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="left-side">
+              <div class="buttons-wrapper">
+                <div class="logo-wrapper">
+                  <div class="logo img"></div>
+                  <div class="logo-text">Biblioteka</div>
+                </div>
+                <a href="my_books">
+                  <div class="button">
+                    <span>Moje ksiązki</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="right-side">
+              
+              <form method="post" action="/search" class="search-wrapper">
+                <div class="input-wrapper">
+                  <div class="search-icon img"></div>
+                  <input
+                    name="fraze"
+                    type="text"
+                    class="search-input"
+                    placeholder="Szukaj..."
+                  />
+                </div>
+              </form>
+              <div class="user-bar">
+                <div id="user-setting" class="user-bar-settings">
+                  <ul class="user-list">
+                    <li>
+                      <a href="">
+                        <div class="user-setbar first-user-settings">
+                          <div
+                            class="icon-settings"
+                            style="
+                              background-image: url(../photos/history-svgrepo-com.svg);
+                            "
+                            alt="icon of setting"
+                          ></div>
+                          <span style="font-weight: bold">niezalgowano</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/login"
+                        ><div class="user-setbar">
+                          <div
+                            class="user-bar-setting img"
+                            style="
+                              background-image: url(../static/images/log-out-off-out-svgrepo-com.svg);
+                            "
+                            alt="icon of setting"
+                          ></div>
+                          <span style="font-weight: bold">Log in</span>
+                        </div></a
+                      >
+                    </li>
+                  </ul>
+      
+                  <div class="close-arrow">
+                    <div
+                      id="closing-arrow"
+                      class="acc-arrow img"
+                      style="
+                        background-image: url(../static/images/arrow-up-svgrepo-com.svg);
+                      "
+                    ></div>
+                  </div>
+                </div>
+                <div id="user-sett-before" class="user-wrapper">
+                  <div
+                    class="profile-img img"
+                    style="
+                      background-image: url(../static/images/user-circle-svgrepo-com.svg);
+                    "
+                  ></div>
+                  <span>Nie zalogowany</span>
+                  <div
+                    id="opening-arrow"
+                    class="img acc-arrow"
+                    style="
+                      background-image: url(../static/images/down-arrow2-svgrepo-com.svg);
+                    "
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="main">
+            <div class="left-column column">
+                <h2 class="title">Adres dostawy</h2>
+                <from id="form" method="post" action="/ordered/{{book_id}}">
+                    <div class="form-group">
+                        <div class="order-input-wrapper adress-wrapper">
+                            <label for="adress">Adres</label>
+                            <input class="input" type="text" name="adress" id="adress">
+                        </div>
+                        <div class="order-input-wrapper street-wrapper">
+                            <label for="street">Ulica</label>
+                            <input class="input" type="text" name="street" id="street">
+                        </div>
+                        <div class="bottom-section">
+                            <div class="order-input selector-wrapper-city">
+                                <label for="city">Miasto</label>
+                                <select name="city" id="city">
+                                    <option value="warszawa">Warszawa</option>
+                                    <option value="krakow">Kraków</option>
+                                    <option value="wroclaw">Wrocław</option>
+                                    <option value="poznan">Poznań</option>
+                                    <option value="gdansk">Gdańsk</option>
+                                    <option value="szczecin">Szczecin</option>
+                                    <option value="lodz">Łódź</option>
+                                    <option value="katowice">Katowice</option>
+                                    <option value="bialystok">Białystok</option>
+                                    <option value="lublin">Lublin</option>
+                                    <option value="kielce">Kielce</option>
+                                </select>
+                            </div>
+                            <button  class="submit-button" type="submit">Rent</button>
+                        </div>  
+                    </div> 
+                </from>
+            </div>
+            <div class="right-column column">
+                {% for item in results %}
+                <div class="book-wrapper">
+                    <div class="top-wrapper">
+                        <div style="background-image: url(../static/images/book-covers/{{item[0]}});" class="book-img img"></div>
+                    </div>
+                    <div class="bottom-wrapper">
+                        <div class="author-wrapper text-wrapper">
+                            <span>{{item[1]}}</span>
+                        </div>
+                        <div class="title-wrapper text-wrapper">
+                            <span>{{item[2]}}<span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+          </div>
+
+          <footer class="footer">
+            <a href="#"><div class="footer-button-wrapper button">Biblioteka</div></a>
+            <a href="/contact"
+              ><div class="footer-button-wrapper button">Kontakt</div></a
+            >
+            <a href="#"><div class="footer-button-wrapper button">Regulamin</div></a>
+          </footer>
+        <script src="../static/scripts/loader.js" async defer></script>
+        <script src="../static/scripts/main.js"></script>
+    </body>
+</html>

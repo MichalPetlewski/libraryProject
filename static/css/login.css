@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --black: #292b2c;
+    --blue-matte: rgb(101, 119, 179);
+}
+
+.logo{
+    width: 60px;
+    height: 60px;
+    background-image: url('../images/library-svgrepo-com.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    background-image: url('../images/login-register-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-y: hidden;
+    margin: 0px;
+    backdrop-filter: blur(5px); 
+}
+
+.heading{
+    font-size: 40px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    opacity: 0.9;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form input{
+    width: 300px;
+    height: 30px;
+    font-size: medium;
+}
+
+.login-btn{
+    background-color: var(--blue-matte);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.login-btn:hover{
+    background-color: gold;
+    color: var(--black);   
+}
+
+.info-for-user{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    gap: 5px;
+}
+
+.info-for-user span{
+    font-size: large;
+}
+
+.info-for-user a{
+   font-size: large;
+   text-decoration: none;
+   color: gold;
+}
+
+.info-for-user a:hover{
+    color: rgb(255, 255, 0);
+}
+
+.message{
+    color: red;
+}

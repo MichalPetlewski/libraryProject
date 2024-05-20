@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/contacts.css" />
+    <link rel="stylesheet" href="../static/css/header.css" />
+    <link rel="stylesheet" href="../static/css/footer.css" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="left-side">
+        <div class="buttons-wrapper">
+          <div class="logo-wrapper">
+            <div class="logo img"></div>
+            <div class="logo-text">Biblioteka</div>
+          </div>
+          <a href="my_books">
+            <div class="button">
+              <span>Moje ksiązki</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="right-side">
+        <form method="post" action="/search" class="search-wrapper">
+          <div class="input-wrapper">
+            <div class="search-icon img"></div>
+            <input
+              name="fraze"
+              type="text"
+              class="search-input"
+              placeholder="Szukaj..."
+            />
+          </div>
+        </form>
+        <div class="user-bar">
+          <div id="user-setting" class="user-bar-settings">
+            <ul class="user-list">
+              <li>
+                <a href="">
+                  <div class="user-setbar first-user-settings">
+                    <div
+                      class="icon-settings"
+                      style="
+                        background-image: url(../photos/history-svgrepo-com.svg);
+                      "
+                      alt="icon of setting"
+                    ></div>
+                    <span style="font-weight: bold">niezalgowano</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="/login"
+                  ><div class="user-setbar">
+                    <div
+                      class="user-bar-setting img"
+                      style="
+                        background-image: url(../static/images/log-out-off-out-svgrepo-com.svg);
+                      "
+                      alt="icon of setting"
+                    ></div>
+                    <span style="font-weight: bold">Log in</span>
+                  </div></a
+                >
+              </li>
+            </ul>
+
+            <div class="close-arrow">
+              <div
+                id="closing-arrow"
+                class="acc-arrow img"
+                style="
+                  background-image: url(../static/images/arrow-up-svgrepo-com.svg);
+                "
+              ></div>
+            </div>
+          </div>
+          <div id="user-sett-before" class="user-wrapper">
+            <div
+              class="profile-img img"
+              style="
+                background-image: url(../static/images/user-circle-svgrepo-com.svg);
+              "
+            ></div>
+            <span>Nie zalogowany</span>
+            <div
+              id="opening-arrow"
+              class="img acc-arrow"
+              style="
+                background-image: url(../static/images/down-arrow2-svgrepo-com.svg);
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <div class="top-section">
+        <h2>Kontakt</h2>
+      </div>
+      <section class="contacts-wrapper">
+        <div class="contact-item">
+          <div class="left-side-text">
+            <div
+              style="background-image: url(../static/images/debil.jpg)"
+              class="contact-icon img"
+            ></div>
+            <div class="text-wrapper">
+              <div class="contact-text">[Tu wpierdol imie]</div>
+              <div class="contact-text">[Tu wpierdol mail]</div>
+              <div class="contact-text">nr: 997</div>
+            </div>
+          </div>
+          <div class="right-side-text">
+            <div class="role-text">
+              <span class="contact-text">rola w zespole:</span>
+              <span class="contact-text">Full stack developer</span>
+            </div>
+          </div>
+        </div>
+        
+      </section>  
+    </div>
+    <footer class="footer">
+      <a href="#"><div class="footer-button-wrapper button">Biblioteka</div></a>
+      <a href="/contact"><div class="footer-button-wrapper button">Kontakt</div></a>
+      <a href="#"><div class="footer-button-wrapper button">Regulamin</div></a>
+    </footer>
+    <script src="../static/scripts/main.js" async defer></script>
+  </body>
+</html>
